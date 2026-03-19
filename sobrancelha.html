@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Curso de Sobrancelha Online — Aprenda do zero ao profissional por apenas R$97. Veja o que está incluso e depoimentos reais.">
+<meta name="keywords" content="curso de sobrancelha online, aprender sobrancelha, curso sobrancelha barato, sobrancelha profissional">
+<title>Curso de Sobrancelha Online — ElaAprende</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --rose: #C2185B; --rose-light: #FCE4EC; --rose-mid: #F48FB1;
+    --cream: #FFF9F5; --dark: #1A0A0F; --gray: #6B5B62; --gray-light: #F5EEF0; --white: #FFFFFF;
+    --font-display: 'Playfair Display', Georgia, serif; --font-body: 'DM Sans', sans-serif;
+  }
+  body { font-family: var(--font-body); background: var(--cream); color: var(--dark); line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,249,245,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rose-light); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-family: var(--font-display); font-size: 1.5rem; color: var(--rose); text-decoration: none; font-style: italic; }
+  .logo span { font-style: normal; font-weight: 700; }
+  nav a.nav-link { font-size: 0.875rem; font-weight: 500; color: var(--gray); text-decoration: none; }
+  nav a.nav-link:hover { color: var(--rose); }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+
+  .breadcrumb { font-size: 0.8rem; color: var(--gray); margin-bottom: 2rem; }
+  .breadcrumb a { color: var(--rose); text-decoration: none; }
+
+  .product-hero { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start; margin-bottom: 4rem; }
+  
+  .product-tag { display: inline-block; background: var(--rose-light); color: var(--rose); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 1rem; }
+  
+  h1 { font-family: var(--font-display); font-size: 2.2rem; line-height: 1.2; margin-bottom: 1rem; }
+  h1 em { color: var(--rose); font-style: italic; }
+  
+  .product-desc { color: var(--gray); font-size: 1rem; font-weight: 300; margin-bottom: 1.5rem; }
+
+  .checklist { list-style: none; margin-bottom: 2rem; }
+  .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; margin-bottom: 0.6rem; color: var(--dark); }
+  .checklist li::before { content: "✓"; color: var(--rose); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+  /* STICKY BUY BOX */
+  .buy-box { background: var(--white); border: 1px solid var(--rose-light); border-radius: 20px; padding: 2rem; position: sticky; top: 80px; }
+  .buy-box .thumb { height: 150px; background: linear-gradient(135deg, #FCE4EC, #F8BBD9); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin-bottom: 1.5rem; }
+  .buy-box .price-old { font-size: 0.85rem; color: var(--gray); text-decoration: line-through; }
+  .buy-box .price { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--rose); }
+  .buy-box .price-installment { font-size: 0.8rem; color: var(--gray); margin-bottom: 1.5rem; }
+  .btn-buy { display: block; text-align: center; background: var(--rose); color: var(--white); padding: 16px; border-radius: 100px; font-size: 1rem; font-weight: 500; text-decoration: none; transition: opacity 0.2s; margin-bottom: 0.75rem; }
+  .btn-buy:hover { opacity: 0.85; }
+  .guarantee { font-size: 0.75rem; color: var(--gray); text-align: center; }
+
+  /* CONTEÚDO */
+  h2 { font-family: var(--font-display); font-size: 1.75rem; margin: 2.5rem 0 1rem; }
+  h2 em { color: var(--rose); font-style: italic; }
+  p { color: var(--gray); font-weight: 300; margin-bottom: 1rem; }
+
+  .testimonials { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .testimonial { background: var(--white); border: 1px solid var(--gray-light); border-radius: 16px; padding: 1.25rem; }
+  .testimonial .stars { color: #FFC107; font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .testimonial .text { font-size: 0.85rem; color: var(--gray); margin-bottom: 0.75rem; font-weight: 300; font-style: italic; }
+  .testimonial .author { font-size: 0.8rem; font-weight: 500; color: var(--dark); }
+
+  .faq { margin: 2rem 0; }
+  .faq-item { border-bottom: 1px solid var(--gray-light); padding: 1rem 0; }
+  .faq-q { font-weight: 500; color: var(--dark); margin-bottom: 0.5rem; }
+  .faq-a { font-size: 0.9rem; color: var(--gray); font-weight: 300; }
+
+  .cta-bottom { background: var(--rose); border-radius: 20px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
+  .cta-bottom h3 { font-family: var(--font-display); font-size: 1.75rem; color: var(--white); margin-bottom: 0.75rem; }
+  .cta-bottom p { color: var(--rose-mid); margin-bottom: 1.5rem; }
+  .btn-white { display: inline-block; background: var(--white); color: var(--rose); padding: 14px 32px; border-radius: 100px; font-weight: 500; text-decoration: none; transition: opacity 0.2s; }
+  .btn-white:hover { opacity: 0.9; }
+
+  footer { background: var(--dark); color: #A08090; text-align: center; padding: 2rem; font-size: 0.85rem; }
+  footer a { color: var(--rose-mid); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .product-hero { grid-template-columns: 1fr; }
+    .testimonials { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><span>Ela</span>Aprende</a>
+  <a href="index.html" class="nav-link">← Voltar</a>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">ElaAprende</a> › <a href="index.html#cursos">Cursos</a> › Sobrancelha
+  </div>
+
+  <div class="product-hero">
+    <div class="product-info">
+      <span class="product-tag">✏️ Beleza & Renda</span>
+      <h1>Curso Completo de <em>Sobrancelha</em> Online</h1>
+      <p class="product-desc">Aprenda do zero a fazer sobrancelhas perfeitas — para você mesma, para amigas ou para atender clientes e gerar renda extra. Conteúdo 100% online, assista quando quiser.</p>
+
+      <ul class="checklist">
+        <li>Design de sobrancelha do zero ao profissional</li>
+        <li>Henna e coloração passo a passo</li>
+        <li>Como montar seu kit de materiais sem gastar muito</li>
+        <li>Dicas para atender as primeiras clientes</li>
+        <li>Precificação e como cobrar pelo seu trabalho</li>
+        <li>Certificado de conclusão incluso</li>
+        <li>Acesso vitalício ao conteúdo</li>
+      </ul>
+    </div>
+
+    <div class="buy-box">
+      <div class="thumb">✏️</div>
+      <div class="price-old">De R$ 197,00</div>
+      <div class="price">R$ 157,90</div>
+      <div class="price-installment">ou 3x de R$ 52,63 sem juros</div>
+      <!-- SUBSTITUA O # PELO SEU LINK DE AFILIADO DA HOTMART -->
+      <a href="https://go.hotmart.com/L104980110U?ap=9bff" class="btn-buy">Quero me inscrever agora</a>
+      <p class="guarantee">🔒 Garantia de 7 dias · Pagamento seguro</p>
+    </div>
+  </div>
+
+  <h2>Por que <em>aprender sobrancelha</em> vale a pena?</h2>
+  <p>Sobrancelha bem feita é um dos serviços mais procurados por mulheres hoje em dia. Com um curso completo, você aprende a fazer para si mesma e ainda tem a possibilidade de atender amigas, familiares e clientes — transformando conhecimento em renda extra.</p>
+  <p>O melhor é que você não precisa de salão ou espaço físico para começar. Muitas alunas iniciam atendendo em casa, no fim de semana, e já conseguem recuperar o investimento do curso nas primeiras semanas.</p>
+
+  <h2>O que <em>dizem as alunas</em></h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="text">"Fiz o curso sem saber nada e em 3 semanas já estava atendendo vizinhas. Amei cada aula!"</p>
+      <div class="author">— Fernanda S., São Paulo</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="text">"Recuperei o valor do curso na primeira semana de atendimento. Vale cada centavo!"</p>
+      <div class="author">— Camila R., Belo Horizonte</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="text">"Aprendi no meu ritmo, com meu filho dormindo. Conteúdo super completo e didático."</p>
+      <div class="author">— Juliana M., Rio de Janeiro</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="text">"Estava desempregada e hoje tenho minha cartela de clientes fixos. Mudou minha vida!"</p>
+      <div class="author">— Priscila T., Fortaleza</div>
+    </div>
+  </div>
+
+  <h2>Perguntas <em>frequentes</em></h2>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Preciso ter experiência prévia?</div>
+      <div class="faq-a">Não! O curso começa do absoluto zero. Qualquer pessoa consegue acompanhar as aulas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Por quanto tempo tenho acesso?</div>
+      <div class="faq-a">O acesso é vitalício. Você assiste no seu ritmo, quantas vezes quiser.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">E se eu não gostar do curso?</div>
+      <div class="faq-a">Você tem 7 dias de garantia. Se não ficar satisfeita, basta solicitar o reembolso e receberá seu dinheiro de volta.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Ganho certificado?</div>
+      <div class="faq-a">Sim! Ao concluir o curso, você recebe um certificado de conclusão para usar como portfólio.</div>
+    </div>
+  </div>
+
+  <div class="cta-bottom">
+    <h3>Pronta para começar?</h3>
+    <p>Mais de 2.400 mulheres já fizeram esse curso. Chegou a sua vez.</p>
+    <!-- SUBSTITUA O # PELO SEU LINK DE AFILIADO DA HOTMART -->
+    <a href="https://go.hotmart.com/L104980110U?ap=9bff" class="btn-white">Quero me inscrever por R$ 157,90</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ElaAprende · <a href="#">Política de Privacidade</a> · <a href="#">Contato</a></p>
+  <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Links de afiliados. Ao comprar, você apoia o ElaAprende sem custo extra.</p>
+</footer>
+
+</body>
+</html>

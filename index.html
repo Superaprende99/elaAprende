@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cursos online para mulheres que querem aprender novas habilidades e gerar renda. Sobrancelha, artesanato, EVA e muito mais.">
+<meta name="keywords" content="curso de sobrancelha online, curso de EVA, cursos femininos, aprender e ganhar, cursos para mulheres">
+<title>ElaAprende — Cursos que Transformam</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --rose: #C2185B;
+    --rose-light: #FCE4EC;
+    --rose-mid: #F48FB1;
+    --cream: #FFF9F5;
+    --dark: #1A0A0F;
+    --gray: #6B5B62;
+    --gray-light: #F5EEF0;
+    --white: #FFFFFF;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,249,245,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rose-light);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--rose);
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  .logo span { font-style: normal; font-weight: 700; }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--rose); }
+
+  /* HERO */
+  .hero {
+    min-height: 88vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    gap: 4rem;
+  }
+
+  .hero-text { animation: fadeUp 0.8s ease both; }
+
+  .hero-tag {
+    display: inline-block;
+    background: var(--rose-light);
+    color: var(--rose);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+  }
+
+  .hero h1 em {
+    color: var(--rose);
+    font-style: italic;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+    color: var(--gray);
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+    font-weight: 300;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--rose);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(194,24,91,0.25);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(194,24,91,0.35);
+  }
+
+  .btn-secondary {
+    color: var(--rose);
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid var(--rose-mid);
+    transition: background 0.2s;
+  }
+
+  .btn-secondary:hover { background: var(--rose-light); }
+
+  .hero-visual {
+    animation: fadeUp 0.8s 0.2s ease both;
+    position: relative;
+  }
+
+  .hero-card-stack {
+    position: relative;
+    height: 480px;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 300px;
+    height: 380px;
+    background: var(--rose-light);
+    border-radius: 24px;
+    transform: rotate(4deg);
+  }
+
+  .card-front {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 300px;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(194,24,91,0.12);
+  }
+
+  .card-front .card-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .card-front h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-front p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-price .from {
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-decoration: line-through;
+  }
+
+  .card-price .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rose);
+  }
+
+  .card-btn {
+    display: block;
+    text-align: center;
+    background: var(--rose);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .card-btn:hover { opacity: 0.85; }
+
+  .floating-badge {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .floating-badge .badge-icon { font-size: 1.5rem; }
+
+  .floating-badge .badge-text { font-size: 0.8rem; }
+  .floating-badge .badge-text strong { display: block; color: var(--dark); }
+  .floating-badge .badge-text span { color: var(--gray); }
+
+  /* STATS */
+  .stats {
+    background: var(--rose);
+    padding: 3rem 2rem;
+  }
+
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--rose-mid);
+    margin-top: 4px;
+  }
+
+  /* SECTION */
+  section { padding: 5rem 2rem; }
+
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--rose-light);
+    color: var(--rose);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-title em { color: var(--rose); font-style: italic; }
+
+  .section-sub {
+    color: var(--gray);
+    font-size: 1rem;
+    max-width: 560px;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+
+  /* COURSES GRID */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--rose-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(194,24,91,0.12);
+  }
+
+  .course-thumb {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+  }
+
+  .course-thumb.sobrancelha { background: linear-gradient(135deg, #FCE4EC, #F8BBD9); }
+  .course-thumb.eva { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
+  .course-thumb.artigo { background: linear-gradient(135deg, #EDE7F6, #D1C4E9); }
+
+  .course-body { padding: 1.5rem; }
+
+  .course-cat {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .course-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .course-desc {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+  }
+
+  .course-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .course-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--rose);
+  }
+
+  .course-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--rose);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* ARTICLES */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .article-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-light);
+    transition: border-color 0.2s, transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .article-card:hover {
+    border-color: var(--rose-mid);
+    transform: translateY(-3px);
+  }
+
+  .article-cat {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-excerpt {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .article-read {
+    font-size: 0.8rem;
+    color: var(--rose);
+    font-weight: 500;
+  }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: var(--dark);
+    border-radius: 24px;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: var(--rose);
+    opacity: 0.15;
+    border-radius: 50%;
+  }
+
+  .cta-banner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .cta-banner p {
+    color: #A08090;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: #A08090;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    border-top: 1px solid #2A1520;
+  }
+
+  footer a { color: var(--rose-mid); text-decoration: none; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; gap: 2rem; }
+    .hero-visual { display: none; }
+    .stats-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    nav ul { display: none; }
+    .cta-banner { padding: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo"><span>Ela</span>Aprende</a>
+  <ul>
+    <li><a href="#cursos">Cursos</a></li>
+    <li><a href="#artigos">Artigos</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section style="padding: 0;">
+  <div class="hero">
+    <div class="hero-text">
+      <span class="hero-tag">✨ Cursos para mulheres que querem mais</span>
+      <h1>Aprenda uma<br>habilidade,<br><em>transforme</em> sua vida</h1>
+      <p>Do zero ao profissional: cursos online acessíveis para você aprender no seu ritmo e começar a gerar renda hoje.</p>
+      <div class="hero-cta">
+        <a href="#cursos" class="btn-primary">Ver cursos em oferta</a>
+        <a href="#artigos" class="btn-secondary">Ler artigos grátis</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="card-back"></div>
+        <div class="card-front">
+          <span class="card-emoji">✏️</span>
+          <h3>Curso de Sobrancelha</h3>
+          <p>Aprenda a fazer sobrancelhas perfeitas em casa ou para clientes</p>
+          <div class="card-price">
+            <span class="from">R$ 197,00</span>
+            <span class="price">R$ 157,90</span>
+          </div>
+          <a href="sobrancelha.html" class="card-btn">Quero aprender →</a>
+        </div>
+        <div class="floating-badge">
+          <span class="badge-icon">🎉</span>
+          <div class="badge-text">
+            <strong>+2.400 alunas</strong>
+            <span>já transformaram suas vidas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">2.400+</div>
+      <div class="stat-label">Alunas satisfeitas</div>
+    </div>
+    <div>
+      <div class="stat-num">97%</div>
+      <div class="stat-label">Taxa de aprovação</div>
+    </div>
+    <div>
+      <div class="stat-num">R$97</div>
+      <div class="stat-label">A partir de</div>
+    </div>
+  </div>
+</div>
+
+<!-- CURSOS -->
+<section id="cursos">
+  <div class="section-inner">
+    <span class="section-tag">🎓 Nossos cursos</span>
+    <h2 class="section-title">Cursos que <em>realmente</em> ensinam</h2>
+    <p class="section-sub">Conteúdo prático, do zero ao avançado. Aprenda no seu ritmo, pelo celular ou computador.</p>
+
+    <div class="courses-grid">
+      <!-- PRODUTO 1 -->
+      <a href="sobrancelha.html" class="course-card">
+        <div class="course-thumb sobrancelha">✏️</div>
+        <div class="course-body">
+          <div class="course-cat">Beleza • Mais vendido</div>
+          <h3 class="course-title">Curso Completo de Sobrancelha</h3>
+          <p class="course-desc">Aprenda design, henna, micropigmentação e montagem de kit profissional. Do zero ao atendimento de clientes.</p>
+          <div class="course-footer">
+            <span class="course-price">R$ 157,90</span>
+            <span class="course-link">Ver curso →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- PRODUTO 2 -->
+      <a href="eva.html" class="course-card">
+        <div class="course-thumb eva">🌸</div>
+        <div class="course-body">
+          <div class="course-cat">Artesanato • Em oferta</div>
+          <h3 class="course-title">Lembrancinhas e Flores em E.V.A</h3>
+          <p class="course-desc">Crie lembrancinhas lindas para festas e eventos. Aprenda flores e montagens exclusivas para vender ou presentear.</p>
+          <div class="course-footer">
+            <span class="course-price">R$ 24,90</span>
+            <span class="course-link">Ver curso →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTIGO DESTAQUE -->
+      <a href="artigos/como-fazer-sobrancelha-perfeita.html" class="course-card">
+        <div class="course-thumb artigo">📖</div>
+        <div class="course-body">
+          <div class="course-cat">Artigo grátis • Leitura</div>
+          <h3 class="course-title">Como fazer sobrancelha perfeita em casa</h3>
+          <p class="course-desc">Guia completo com dicas profissionais para você cuidar das suas sobrancelhas com segurança e resultado garantido.</p>
+          <div class="course-footer">
+            <span style="font-size:0.85rem;color:var(--gray);">Leitura grátis</span>
+            <span class="course-link">Ler agora →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTIGOS -->
+<section id="artigos" style="background: var(--gray-light);">
+  <div class="section-inner">
+    <span class="section-tag">📝 Artigos</span>
+    <h2 class="section-title">Aprenda <em>de graça</em> por aqui</h2>
+    <p class="section-sub">Conteúdo criado para te ajudar a aprender, decidir e dar o próximo passo.</p>
+
+    <div class="articles-grid">
+      <a href="artigos/como-fazer-sobrancelha-perfeita.html" class="article-card">
+        <div class="article-cat">Sobrancelha</div>
+        <h3 class="article-title">Como fazer sobrancelha perfeita em casa — Guia Completo</h3>
+        <p class="article-excerpt">Aprenda o passo a passo profissional para modelar, preencher e fixar suas sobrancelhas com resultado de salão.</p>
+        <span class="article-read">Ler artigo →</span>
+      </a>
+
+      <a href="artigos/vale-a-pena-curso-sobrancelha.html" class="article-card">
+        <div class="article-cat">Sobrancelha</div>
+        <h3 class="article-title">Vale a pena fazer curso de sobrancelha? Veja o que dizem as alunas</h3>
+        <p class="article-excerpt">Analisamos depoimentos reais de mulheres que fizeram o curso e o que mudou na vida delas depois.</p>
+        <span class="article-read">Ler artigo →</span>
+      </a>
+
+      <a href="artigos/flores-eva-para-vender.html" class="article-card">
+        <div class="article-cat">Artesanato</div>
+        <h3 class="article-title">Flores de EVA para vender: quanto ganhar e como começar</h3>
+        <p class="article-excerpt">Descubra como transformar lembrancinhas de EVA em uma fonte de renda extra fazendo o que você ama.</p>
+        <span class="article-read">Ler artigo →</span>
+      </a>
+
+      <a href="artigos/materiais-sobrancelha-iniciante.html" class="article-card">
+        <div class="article-cat">Sobrancelha</div>
+        <h3 class="article-title">Lista completa de materiais para iniciante em sobrancelha</h3>
+        <p class="article-excerpt">Tudo que você precisa comprar para começar a fazer sobrancelhas em casa sem gastar muito.</p>
+        <span class="article-read">Ler artigo →</span>
+      </a>
+
+      <a href="artigos/lembrancinhas-eva-festa.html" class="article-card">
+        <div class="article-cat">Artesanato</div>
+        <h3 class="article-title">10 ideias de lembrancinhas de EVA para festa infantil que vendem muito</h3>
+        <p class="article-excerpt">Inspirações práticas e econômicas para criar lembrancinhas exclusivas que encantam as mamães.</p>
+        <span class="article-read">Ler artigo →</span>
+      </a>
+
+      <a href="artigos/curso-sobrancelha-online-vale-pena.html" class="article-card">
+        <div class="article-cat">Sobrancelha</div>
+        <h3 class="article-title">Curso de sobrancelha online ou presencial? Qual é melhor em 2025</h3>
+        <p class="article-excerpt">Comparamos os dois formatos para você saber qual se encaixa melhor no seu objetivo e orçamento.</p>
+        <span class="article-read">Ler artigo →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="cta-banner">
+      <h2>Pronta para dar o próximo passo?</h2>
+      <p>Milhares de mulheres já transformaram suas vidas aprendendo uma nova habilidade. Você pode ser a próxima.</p>
+      <a href="#cursos" class="btn-primary">Ver todos os cursos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 ElaAprende · Todos os direitos reservados · <a href="#">Política de Privacidade</a> · <a href="#">Contato</a></p>
+  <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;">Este site contém links de afiliados. Ao comprar por eles, você apoia o ElaAprende sem custo extra.</p>
+</footer>
+
+</body>
+</html>
